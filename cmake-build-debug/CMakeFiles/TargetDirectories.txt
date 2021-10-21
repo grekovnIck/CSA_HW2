@@ -1,0 +1,3 @@
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/cmake-build-debug/CMakeFiles/ABC_HW2_Grekov_Nickolay.dir
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/cmake-build-debug/CMakeFiles/rebuild_cache.dir

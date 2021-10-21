@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/container/Container.cpp
+Container.h
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/container/Container.h
+iostream
+-
+
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/container/Container.h
+../transport_type/Transport.h
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/transport_type/Transport.h
+fstream
+-
+
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/transport_type/Transport.h
+fstream
+-
+
