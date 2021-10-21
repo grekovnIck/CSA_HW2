@@ -1,5 +1,5 @@
 #include "time.h"
-#include "container/Container.h"fksfld
+#include "container/Container.h"
 
 #define INFO    "Дисциплина: Архитектура Вычислительных Систем\n"\
                 "Тип работы: Индивидуальное домашнее задание №2\n"\

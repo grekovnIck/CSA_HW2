@@ -1,6 +1,4 @@
 #include "Container.h"
-#include <iostream>
-//TODO delete iostream
 
 // Конструктор контейнера
 Container::Container():len{0} {};
@@ -31,10 +29,8 @@ void Container::In(FILE *file) {
                 len++;
             }
         } catch (int er) {
-            std::cout << ' ' <<  1;
             fprintf(file, "Incorrect input!\n");
         }
-        std::cout << ' ' <<  2;
     }
 }
 
@@ -51,7 +47,6 @@ void Container::Random(int size) {
 void Container::Out(FILE* &file) {
     fprintf(file, "Container contains %d elements.\n", len);
     for(int i = 0; i < len; i++) {
-        //ofst << i;
         storage[i]->Out(file);
     }
 }
@@ -129,8 +124,6 @@ void Container::Sort() {
         // Сама сортировка.
         for (block_size_iterator = 1; block_size_iterator < len; block_size_iterator *= 2) {
             for (block_iterator = 0; block_iterator < len - block_size_iterator; block_iterator += 2 * block_size_iterator) {
-                // Производим слияние с сортировкой пары блоков начинающуюся с элемента BlockIterator.
-                // Левый размером BlockSizeIterator, правый размером BlockSizeIterator или меньше.
                 left_block_iterator = 0;
                 right_block_iterator = 0;
                 left_border = block_iterator;
@@ -139,7 +132,7 @@ void Container::Sort() {
                 right_border = (right_border < len) ? right_border : len;
                 auto *SortedBlock = new Dequeue[right_border - left_border];
 
-                // Пока в обоих массивах есть элементы выбираем меньший из них и заносим в отсортированный блок.
+
                 while (left_border + left_block_iterator < mid_border && mid_border + right_block_iterator < right_border) {
                     if (a[left_border + left_block_iterator].max_distance <
                         a[mid_border + right_block_iterator].max_distance) {
@@ -152,7 +145,7 @@ void Container::Sort() {
                         right_block_iterator += 1;
                     }
                 }
-                // После этого заносим оставшиеся элементы из левого или правого блока.
+
                 while (left_border + left_block_iterator < mid_border) {
                     SortedBlock[left_block_iterator + right_block_iterator] = a[left_border + left_block_iterator];
                     left_block_iterator += 1;
