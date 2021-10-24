@@ -24,13 +24,10 @@ void Container::Clear() {
 // Ввод содержимого контейнера из указанного файла
 void Container::In(FILE *file) {
     while(!feof(file)) {
-        try {
-            if ((storage[len] = Transport::StaticInput(file)) != nullptr) {
-                len++;
-            }
-        } catch (int er) {
-            fprintf(file, "Incorrect input!\n");
+        if ((storage[len] = Transport::StaticInput(file)) != nullptr) {
+            len++;
         }
+
     }
 }
 

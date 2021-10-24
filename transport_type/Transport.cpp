@@ -5,7 +5,7 @@ Transport* Transport::StaticInput(FILE *input_file) {
     int transport_type;
 
     if (fscanf(input_file, "%d\n", &transport_type) != 1) {
-        throw 1;//"Incorrect input!"
+        return nullptr;//"Incorrect input!"
     }
     Transport* transport;
     switch (transport_type) {

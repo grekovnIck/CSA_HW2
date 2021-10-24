@@ -6,15 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/container/Container.cpp
-Container.h
-C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/container/Container.h
-
 C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/container/Container.h
 ../transport_type/Transport.h
 C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/transport_type/Transport.h
 fstream
 -
+
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/main.cpp
+time.h
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/time.h
+container/Container.h
+C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/container/Container.h
 
 C:/Users/greko/CLionProjects/ABC_HW2_Grekov_Nickolay/transport_type/Transport.h
 fstream

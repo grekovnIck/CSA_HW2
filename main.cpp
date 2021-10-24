@@ -9,7 +9,7 @@
 #define HELP    "Генерация случайных объектов:\n" \
                 "-r <кол-во генерируемых объектов> <название выходного файла>.txt" \
                 "Пример: -rnd 10 output.txt\n"\
-                "Чтение обьектов из файла\n"      \
+                "Чтение объектов из файла\n"      \
                 "-w <название входного файла>.txt <название выходного файла>.txt"\
                 "-w input.txt output.txt"
 
@@ -17,14 +17,14 @@
 int get_size(char* num) {
     int i = 0, k = 1, output = 0;
     while(num[i++]){
-        k*=10;
+        k *= 10;
     }
-    k/=10;
+    k /= 10;
     i = 0;
     while(num[i]) {
         output += (num[i]-'0')*k;
         i++;
-        k/=10;
+        k /= 10;
     }
     return output;
 }
@@ -33,10 +33,10 @@ int main(int argc, char* argv[]) {
     time_t start, finish;
     start = clock();
     Container* container = new Container();
+    printf(INFO);
 // Генерация объектов output
     if(argv[1][1] == 'r') {
         container->Random( get_size(argv[2]));
-        //std::cout << argv[3];
         FILE *fp;
         fp = fopen(argv[3], "w");
         container->Out(fp);
@@ -58,6 +58,10 @@ int main(int argc, char* argv[]) {
         FILE* fp;
         fp = fopen(argv[3], "w");
         container->Parameters(fp);
+    } else {
+        printf(HELP);
     }
+    finish = clock();
+    printf("Time: %f\n", difftime(finish, start)/CLOCKS_PER_SEC);
     return 0;
 }
